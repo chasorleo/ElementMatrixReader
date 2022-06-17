@@ -37,6 +37,28 @@ FIXND, PINNED
 CFNDV, 2, 2.
 *Cload
 CFNDH, 1, 1.
+*Boundary
+CFNDV, 2, 2, 1.
+*End Step
+*Step
+*MATRIX GENERATE,STIFFNESS,LOAD,ELEMENT BY ELEMENT
+*MATRIX OUTPUT,FORMAT=COORDINATE,STIFFNESS,LOAD
+*Cload
+CFNDV, 2, 2.
+*Cload
+CFNDH, 1, 1.
+*Boundary
+CFNDV, 2, 2, 1.
+*End Step
+*Step
+*MATRIX GENERATE,STIFFNESS,LOAD
+*MATRIX OUTPUT,FORMAT=MATRIX INPUT,STIFFNESS,LOAD
+*Cload
+CFNDV, 2, 2.
+*Cload
+CFNDH, 1, 1.
+*Boundary
+CFNDV, 2, 2, 1.
 *End Step
 *Step
 *MATRIX GENERATE,STIFFNESS,LOAD
@@ -45,6 +67,8 @@ CFNDH, 1, 1.
 CFNDV, 2, 2.
 *Cload
 CFNDH, 1, 1.
+*Boundary
+CFNDV, 2, 2, 1.
 *End Step
 *Step
 *STATIC
@@ -53,6 +77,8 @@ CFNDH, 1, 1.
 CFNDV, 2, 2.
 *Cload
 CFNDH, 1, 1.
+*Boundary
+CFNDV, 2, 2, 1.
 *Restart, write, frequency=0
 *Output, field, variable=PRESELECT
 *Output, history, variable=PRESELECT
